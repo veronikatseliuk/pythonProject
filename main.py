@@ -11,38 +11,38 @@ print(list_2)
 # 2. Дан список чисел. Посчитайте, сколько в нем пар элементов, равных друг другу.
 # Считается, что любые два элемента, равные друг другу образуют одну пару,
 # которую необходимо посчитать.
-# numbers = [int(n) for n in input().split()]
-# count = 0
-# for i in range(len(numbers)):
-#     for j in range(i + 1, len(numbers)):
-#         print(numbers[i], numbers[j])
-#         if numbers[i] == numbers[j]:
-#             count += 1
-# print(count)
+numbers = [int(n) for n in input().split()]
+count = 0
+for i in range(len(numbers)):
+    for j in range(i + 1, len(numbers)):
+        print(numbers[i], numbers[j])
+        if numbers[i] == numbers[j]:
+            count += 1
+print(count)
 
 
 # 3. Даны два кортежа:
-# C_1 = (35, 78,21,37, 2,98, 6, 100, 231)
-# C_2 = (45, 21,124,76,5,23,91,234)
+C_1 = (35, 78,21,37, 2,98, 6, 100, 231)
+C_2 = (45, 21,124,76,5,23,91,234)
 # Необходимо определить:
 # 1) Сумма элементов какого из кортежей больше и вывести соответствующее
 # сообщение на экран (Сумма больше в кортеже - ..)
-# sum1, sum2 = sum(C_1), sum(C_2)
-# if sum1>sum2:
-#     print(f'Сумма больше в кортеже - C_1: {C_1}')
-# else:
-#     print(f'Сумма больше в кортеже - C_2: {C_2}')
+sum1, sum2 = sum(C_1), sum(C_2)
+if sum1>sum2:
+    print(f'Сумма больше в кортеже - C_1: {C_1}')
+else:
+    print(f'Сумма больше в кортеже - C_2: {C_2}')
 
 # 2) Вывести на экран порядковые номера минимальных и максимальных элементов
 # этих кортежей
-# max_el1 , max_el2 = max(C_1), max(C_2)
-# min_el1 , min_el2 = min(C_1), min(C_2)
-#
-# print(f'Порядковый номер максимального значения С_1 - {max_el1} = {C_1.index(max_el1) +1}\n'
-#       f'Порядковый номер максимального значения С_2 - {max_el2} = {C_2.index(max_el2) +1}\n'
-#     f'Порядковый номер минимального значения С_1 - {min_el1} = {C_1.index(min_el1) +1}\n'
-#     f'Порядковый номер минимального значения С_2 - {min_el2} = {C_2.index(min_el2) +1}\n'
-#       )
+max_el1 , max_el2 = max(C_1), max(C_2)
+min_el1 , min_el2 = min(C_1), min(C_2)
+
+print(f'Порядковый номер максимального значения С_1 - {max_el1} = {C_1.index(max_el1) +1}\n'
+      f'Порядковый номер максимального значения С_2 - {max_el2} = {C_2.index(max_el2) +1}\n'
+    f'Порядковый номер минимального значения С_1 - {min_el1} = {C_1.index(min_el1) +1}\n'
+    f'Порядковый номер минимального значения С_2 - {min_el2} = {C_2.index(min_el2) +1}\n'
+      )
 
 
 
@@ -50,9 +50,9 @@ print(list_2)
 # образом: в качестве ключей возьмите символы строки, а значениями пусть будут
 # числа, соответствующие количеству вхождений данной буквы в строку.
 
-# text = 'An apple a day keeps the doctor away'
-# vocabulary = {i: text.count(i) for i in text}
-# print(vocabulary)
+text = 'An apple a day keeps the doctor away'
+vocabulary = {i: text.count(i) for i in text}
+print(vocabulary)
 
 
 # 5. Клиент приходит в кондитерскую. Он хочет приобрести один или несколько видов # продукции, а также узнать её состав.
@@ -70,108 +70,108 @@ print(list_2)
 # Посчитать цену выбранных товаров и сколько товаров осталось в изначальном
 # списке
 # 6. До свидания
-# confectionery = {
-#     'торт': [['мука','яйцо','вода','сметана'],20, 5], #состав, цена, количество
-#     'маффин': [['мука','какао','вода'],10, 3],
-#     'пирожное': [['мука','масло','вода'],15, 2]
-# }
-# summa = 0
-# while True:
-#     print("""1. Посмотреть описание: название – описание
-#     2. Посмотреть цену: название – цена.
-#     3. Посмотреть количество: название – количество.
-#     4. Посмотреть всю информацию.
-#     5. Приступить к покупке:
-#     6. До свидания""")
-#     x = int(input("Выберете вариант: "))
-#     if x == 1:
-#         for k,v in confectionery.items():
-#             print(f'название - {k},состав - {v[0]}')
-#     elif x == 2:
-#         for k,v in confectionery.items():
-#             print(f'название - {k},цена за 100 г - {v[1]} руб')
-#     elif x==3:
-#         for k,v in confectionery.items():
-#             print(f'название - {k}, количество - {v[2]} грамм')
-#     elif x==4:
-#         for k,v in confectionery.items():
-#             print(f'название - {k},состав - {v[0]},цена за 100 г - {v[1]} руб, количество - {v[2]} грамм')
-#     elif x==5:
-#         while True:
-#             print('Список товаров в магазине: ')
-#             for k in confectionery.keys():
-#                 print(f'название - {k}')
-#             name_product = input("Выберете товар из списка, который хотите купить: ")
-#             if name_product not in confectionery:
-#                 print('Вы ввели некорректное название товара! Выберете из списка:')
-#             else:
-#                 print(f'остаток {name_product} в магазине - {confectionery[name_product][2]}')
-#                 while True:
-#                     amount_product = int(input('Какое количество хотите купить (грамм): '))
-#                     if amount_product>confectionery[name_product][2]:
-#                         print('К сожалению такого количество нет в нашем магазине. Попробуйте ввести меньшее количество.')
-#                     else:
-#                         confectionery[name_product][2] -= amount_product
-#                         print(f'остаток в магазине - {confectionery[name_product][2]}')
-#                         summa = summa + (confectionery[name_product][2] * amount_product)
-#                         break
-#             f = input('Желаете продолжить покупки? (да/нет)')
-#             if f=='да':
-#                 continue
-#             elif f=='нет':
-#                 print('Сумма покупок = ', summa)
-#                 break
-#     elif x == 6:
-#         print('До свидания! Программа завершена.')
-#         print('Остаток товаров в магазине: ')
-#         for k,v in confectionery.items():
-#             print(f'название - {k}, количество - {v[2]} грамм')
-#         break
+confectionery = {
+    'торт': [['мука','яйцо','вода','сметана'],20, 5], #состав, цена, количество
+    'маффин': [['мука','какао','вода'],10, 3],
+    'пирожное': [['мука','масло','вода'],15, 2]
+}
+summa = 0
+while True:
+    print("""1. Посмотреть описание: название – описание
+    2. Посмотреть цену: название – цена.
+    3. Посмотреть количество: название – количество.
+    4. Посмотреть всю информацию.
+    5. Приступить к покупке:
+    6. До свидания""")
+    x = int(input("Выберете вариант: "))
+    if x == 1:
+        for k,v in confectionery.items():
+            print(f'название - {k},состав - {v[0]}')
+    elif x == 2:
+        for k,v in confectionery.items():
+            print(f'название - {k},цена за 100 г - {v[1]} руб')
+    elif x==3:
+        for k,v in confectionery.items():
+            print(f'название - {k}, количество - {v[2]} грамм')
+    elif x==4:
+        for k,v in confectionery.items():
+            print(f'название - {k},состав - {v[0]},цена за 100 г - {v[1]} руб, количество - {v[2]} грамм')
+    elif x==5:
+        while True:
+            print('Список товаров в магазине: ')
+            for k in confectionery.keys():
+                print(f'название - {k}')
+            name_product = input("Выберете товар из списка, который хотите купить: ")
+            if name_product not in confectionery:
+                print('Вы ввели некорректное название товара! Выберете из списка:')
+            else:
+                print(f'остаток {name_product} в магазине - {confectionery[name_product][2]}')
+                while True:
+                    amount_product = int(input('Какое количество хотите купить (грамм): '))
+                    if amount_product>confectionery[name_product][2]:
+                        print('К сожалению такого количество нет в нашем магазине. Попробуйте ввести меньшее количество.')
+                    else:
+                        confectionery[name_product][2] -= amount_product
+                        print(f'остаток в магазине - {confectionery[name_product][2]}')
+                        summa = summa + (confectionery[name_product][2] * amount_product)
+                        break
+            f = input('Желаете продолжить покупки? (да/нет)')
+            if f=='да':
+                continue
+            elif f=='нет':
+                print('Сумма покупок = ', summa)
+                break
+    elif x == 6:
+        print('До свидания! Программа завершена.')
+        print('Остаток товаров в магазине: ')
+        for k,v in confectionery.items():
+            print(f'название - {k}, количество - {v[2]} грамм')
+        break
 
 
 
 # 6. Даны два списка чисел. Посчитайте, сколько чисел содержится одновременно как в
 # первом списке, так и во втором.
-# list1 = [1,2,3,4,5,9]
-# list2 = [6,7,8,9,1]
-# set1 = set(list1)
-# set2 = set(list2)
-# print(len(set1.intersection(set2)))
+list1 = [1,2,3,4,5,9]
+list2 = [6,7,8,9,1]
+set1 = set(list1)
+set2 = set(list2)
+print(len(set1.intersection(set2)))
 
 
 # 7. Напишите программу, демонстрирующую работу try\except\finally
-# number_1 = int(input('Введите первое число: '))
-# number_2 = int(input('Введите второе число: '))
-# try:
-#     result = number_1/number_2
-#     print(result)
-# except ZeroDivisionError:
-#     print("Деление на ноль")
-# finally:
-#     print('Программа завершена')
+number_1 = int(input('Введите первое число: '))
+number_2 = int(input('Введите второе число: '))
+try:
+    result = number_1/number_2
+    print(result)
+except ZeroDivisionError:
+    print("Деление на ноль")
+finally:
+    print('Программа завершена')
 
 # 8. В текстовый файл построчно записаны фамилия и имя учащихся класса и его
 # оценка за контрольную. Вывести на экран всех учащихся, чья оценка меньше 3
 # баллов и посчитать средний балл по классу
 
 
-# with open('my_text.txt', 'r',encoding='utf-8') as file:
-#     content = file.read()
-#     content = content.split("\n")
-#     pupils = []
-#
-#     for line in content:
-#         line = line.split(" ")
-#         pupils.append([line[0], line[1], int(line[2])])
-#     srednia = 0
-#     print("Ниже 3 баллов:")
-#
-#     for p in pupils:
-#         srednia += int(p[2])
-#         if p[2] < 3:
-#             print(f"{p[0]} {p[1]}: {p[2]}")
-#         srednia /= len(pupils)
-#
-#     print(f"Средняя оценка по классу: {srednia}")
+with open('my_text.txt', 'r',encoding='utf-8') as file:
+    content = file.read()
+    content = content.split("\n")
+    pupils = []
+
+    for line in content:
+        line = line.split(" ")
+        pupils.append([line[0], line[1], int(line[2])])
+    srednia = 0
+    print("Ниже 3 баллов:")
+
+    for p in pupils:
+        srednia += int(p[2])
+        if p[2] < 3:
+            print(f"{p[0]} {p[1]}: {p[2]}")
+        srednia /= len(pupils)
+
+    print(f"Средняя оценка по классу: {srednia}")
 
 
