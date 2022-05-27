@@ -28,3 +28,18 @@ print(my_dict['foo'])
 print(my_dict['foo']['b'])
 # 3. Добавьте в my_list 44.
 my_list.append('44')
+
+
+
+# 7. Снова выведите множество.
+print(d)
+# 8. Удалите из списка элемент ‘o’.
+my_dict['moo']['f']['Lol'].pop(1)
+# 9. Добавьте в словарь, который является значением ключа ‘f’ ключ ‘K’ со значением ['K', 'e', 'k'].
+my_dict2 = {
+    'K': ['K', 'e', 'k']
+}
+my_dict['moo']['f'].update(my_dict2)
+# 10. Очистите словарь my_dict.
+my_dict.clear()
+
